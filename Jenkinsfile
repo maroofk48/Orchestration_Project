@@ -23,7 +23,7 @@ pipeline {
             }
         }
 
-       sstage('ECR Login') {
+       stage('ECR Login') {
     steps {
         withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-creds']]) {
             sh '''
